@@ -132,11 +132,6 @@ namespace types
   {
     return slicing.size();
   }
-  
-  intptr_t str::id() const
-  {
-    return reinterpret_cast<intptr_t>(&(*data));
-  }
 
   // accessor
   template <class S>
