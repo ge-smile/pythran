@@ -132,6 +132,11 @@ namespace types
   {
     return slicing.size();
   }
+  
+  intptr_t str::id() const
+  {
+    return reinterpret_cast<intptr_t>(&(*data));
+  }
 
   // accessor
   template <class S>
@@ -286,6 +291,11 @@ namespace types
     *data = oss.str();
   }
 
+  intptr_t str::id() const
+  {
+    return reinterpret_cast<intptr_t>(&(*data));
+  }
+  
   str::operator char() const
   {
     assert(size() == 1);
